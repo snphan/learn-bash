@@ -1,0 +1,2 @@
+hello bash script
+ this is some text after
