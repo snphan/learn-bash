@@ -1,6 +1,12 @@
 # Welcome to Learning How to Bash Script
 
 Follows the course on https://www.youtube.com/watch?v=e7BufAVwDiM&t=10058s
+Start your bash script with 
+
+```shell
+#! /bin/bash 
+```
+
 
 ## 01 Hello Bash Scripting
 To show your shell environments use 
@@ -21,6 +27,30 @@ Use **`>`** to put echo contents into file
 Use **`>>`** to append. 
 
     echo "this is some content after" >> 02_file.txt 
+
+## 03 Comments
+
+Use **` : '<your comment here' `** for multiline comments.
+
+## 04 Conditionals
+
+Use the following structure **`if []/(())`** **`then`**, **`else`**, **`elif []/(())`**, **`fi`**
+
+```shell
+#! /bin/bash
+
+count=8
+if (( $count < 9)) && (( $count >= 0 ))
+then
+    echo "count is between 9 and 0"
+elif (($count == 10))
+then 
+    echo "the condition is true"
+else
+    echo "the condition is false"
+fi
+```
+
 
 
 
