@@ -30,7 +30,7 @@ Use **`>>`** to append.
 
 ## 03 Comments
 
-Use **` : '<your comment here' `** for multiline comments.
+Use **` : '<your comment here>' `** for multiline comments.
 
 ## 04 Conditionals
 
@@ -51,6 +51,43 @@ else
 fi
 ```
 
+
+## 05 Loops
+
+While loop
+
+```shell 
+#! /bin/bash
+
+number=1
+while (( $number < 10 ))
+do
+    echo "$number"
+    number=$(( number+1 ))
+done
+```
+
+For loop
+
+```shell 
+for i in 1 2 3 4 5
+do
+    echo $i
+done
+```
+or using a range. *Note! it includes the end {start..end..increment}*
+We can also use C-style for loops (( i=0; i<5; i++ ))
+
+```shell 
+for i in {0..20..2}
+do
+    echo $i
+done
+```
+
+We can also use **`break`** or **`continue`** controls
+
+# 06 Script Input
 
 
 
