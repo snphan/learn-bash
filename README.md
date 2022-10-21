@@ -7,6 +7,10 @@ To show your shell environments use
 
     cat /etc/shells
 
+Bash scripts end in .sh. To make a script executeable, do the following
+
+    chmod +x <filename>
+
 
 
 
