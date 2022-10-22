@@ -185,11 +185,6 @@ echo ${st2^^}
 
 # Upper case first letter.
 echo ${st1^l} 
-
-
-
-
-
 ```
 
 
