@@ -351,3 +351,95 @@ UseSTARTTLS=yes
 
 # 16 - Curl in Scripts
 
+Downloading stuff.
+
+When using curl, use the **`-O`** option to inherit the filename.
+We can change the filename by using the **`-o <filename>`** 
+Look at the file header by using th **`-I`** flag.
+
+```shell
+#! /bin/bash
+
+url="http://speedtest.ftp.otenet.gr/files/test100k.db"
+curl -I ${url}
+curl ${url} -O
+curl ${url} -o 16_test100k.db
+```
+
+# 17 - Professional Menus
+
+Use **`select <varname> in <space separatedlist>`**.
+
+```shell
+#! /bin/bash
+
+select car in BMW MERCEDESE TESLA ROVER TOYOTA
+do
+    case $car in
+    BMW)
+        echo "BMW SELECTED";;
+    MERCEDESE)
+        echo "MERCEDESE SELECTED";;
+    TESLA)
+        echo "TESLA SELECTED";;
+    ROVER)
+        echo "ROVER SELECTED";;
+    TOYOTA)
+        echo "TOYOTA SELECTED";;
+    *)
+        echo "ERROR PLEASE SELECT THE CORRECT ONE";;
+    esac
+done
+```
+
+# 18 - Inotify-tools
+
+To use inotify, we need to install inotify-tools. When stuff happens inside the 
+directory then we will be notified what happens.
+
+    sudo apt install inotify-tools
+
+Do not open log.txt while inotifywait is running or else there will be some sort
+of infinite loop.
+
+```shell
+#! /bin/bash
+dirpath=./18_inotifydir
+if [ ! -d dirpath ]
+then
+    mkdir "$dirpath"
+fi
+inotifywait -m "$dirpath" >> "$dirpath/log.txt"
+```
+
+# 19 - Grep
+
+You need to escape most of the characters **`\+`**, **`\?`**, **`\{<num>\}`**
+
+Use **`-n`** to print out the line numbers
+
+```shell
+#! /bin/bash
+echo "input filename: "
+read filename
+
+if [ -f $filename ]
+then
+    # Get the emails
+    echo "----------------------------------------"
+    echo "All of the emails"
+    grep -n "^[a-zA-Z0-9]\+@[a-zA-Z0-9]\+.\(com\|ca\|co.jp\)" "$filename"
+
+    echo "----------------------------------------"
+
+    # All of the phone numbers
+    echo "All of the phone numbers"
+    grep "(\?[0-9]\{3\})\?-\?[0-9]\{3\}-\?[0-9]\{4\}" "$filename"
+else
+    echo "Error: File does not exist"
+fi
+```
+
+
+
+
