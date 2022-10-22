@@ -270,3 +270,33 @@ echo "${car[@]}"
 car[2]='Lambo'
 echo "${car[@]}"
 ```
+
+# 13 - Functions
+
+Note that bash functions cannot return a value. What needs to be done is to set a global variable
+and read from it. All variables are global by default in bash.
+
+```shell
+#! /bin/bash
+
+function funcName() {
+    echo "this is new functions"
+}
+
+# Adding arguments (same with getting arguments from CLI)
+# Also assigning global variables.
+function funcPrint() {
+    isDone="i am done"
+    echo "Printing from inside function: $1"
+}
+
+
+
+
+# Call the functions
+funcName
+funcPrint "Hi World"
+echo "funcPrint : $isDone"
+```
+
+# 14 - Files and Directories
