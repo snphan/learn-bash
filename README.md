@@ -187,6 +187,44 @@ echo ${st2^^}
 echo ${st1^l} 
 ```
 
+## 10 - Doing math
 
+We need to use **`$(())`** to do math. By default, operations will be performed
+on ints. We can also use **`$(expr <your expression>)`**.
+
+```shell
+#! /bin/bash
+
+n1=4
+n2=20
+
+echo $(( n1 + n2 ))
+echo $(( n1 - n2 ))
+echo $(( n1 * n2 ))
+echo $(( n1 / n2 ))
+echo $(( n1 % n2 ))
+
+
+echo $(expr $n1 + $n2 )
+echo $(expr $n1 - $n2 )
+echo $(expr $n1 \* $n2 )
+echo $(expr $n1 / $n2 )
+echo $(expr $n1 % $n2 )
+```
+
+## Reading Hex
+
+```shell
+#! /bin/bash
+
+echo "Enter Hex Number of you choice"
+read Hex
+
+echo -n "The decimal value of $Hex is : "
+
+echo "obase=10; ibase=16; $Hex" | bc
+```
+
+# 11 - Declaring Variables
 
 
