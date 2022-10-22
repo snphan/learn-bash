@@ -440,6 +440,13 @@ else
 fi
 ```
 
+# Debugging Bash
 
+Use
+
+    bash -x ./<executable file>
+
+In the script, you can also **`set -x`** on the line to start debugging and 
+**`set +x`** on the line to stop debugging.
 
 
