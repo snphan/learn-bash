@@ -127,6 +127,32 @@ ls -a 1>07_output.txt 2>07_err_log.txt
 
 ```
 
+## 08 - Pipes
+
+Tranferring stuff from one script to another. We can use export to send variables to another script.
+
+**`08_firstScript.sh`**
+```shell
+#! /bin/bash
+
+MESSAGE="Hello world"
+export MESSAGE
+./08_secondScript.sh
+```
+
+
+**`08_secondScript.sh`**
+```shell
+
+echo "This is the message from secondScript: $MESSAGE"
+```
+
+## 09 String Processing
+
+```shell
+
+```
+
 
 
 
