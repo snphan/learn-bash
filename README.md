@@ -227,4 +227,19 @@ echo "obase=10; ibase=16; $Hex" | bc
 
 # 11 - Declaring Variables
 
+Using declare is very similar to using const, let, var
 
+```shell
+#! /bin/bash
+
+declare -r pwdfile=/etc/passwd
+
+echo $pwdfile
+
+# Try changing a read-only file
+pwdfile=/etc/abc.txt
+
+echo $pwdfile
+``` 
+
+# 12 - Arrays
