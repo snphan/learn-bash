@@ -332,3 +332,22 @@ else
 fi
 ```
 
+# 15 - Sending emails
+
+We need to use ssmtp
+
+    sudo apt install ssmtp
+
+Create a ssmtp.conf file with the following parameters
+
+**`ssmtp.conf`**
+```
+root=testingemail438@gmail.com
+mailhub=smtp.gmail.com:587
+AuthUser=testingemail438@gmail.com
+AuthPass=securepass
+UseSTARTTLS=yes
+```
+
+# 16 - Curl in Scripts
+
