@@ -89,5 +89,33 @@ We can also use **`break`** or **`continue`** controls
 
 # 06 Script Input
 
+Use the **`$`** to get the args. Note $0 is the filename
+
+```shell
+#! /bin/bash
+
+echo $0 $1 $2 $3
+
+# Also we can get all the args as an array
+args=("$@")
+
+# Print out the all of the arguments
+echo $@
+
+# Length of the array
+echo $#
+```
+Reading a file
+
+```shell
+#! /bin/bash
+while read line
+do
+    echo "$line"
+done < "${1:-/dev/stdin}"
+# ${1....} Means to take the first argument
+```
+
+
 
 
