@@ -116,6 +116,17 @@ done < "${1:-/dev/stdin}"
 # ${1....} Means to take the first argument
 ```
 
+## 07 - Output
+
+Use **`1>`** for STDOUT and **`2>`** for STDERR. Use **`>&`** for both.
+
+```shell
+#! /bin/bash
+
+ls -a 1>07_output.txt 2>07_err_log.txt
+
+```
+
 
 
 

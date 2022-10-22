@@ -1,0 +1,16 @@
+.
+..
+01_helloScript.sh
+02_file.txt
+02_redirect.sh
+04_conditionals.sh
+05_loops.sh
+06_input.sh
+07_err_log.txt
+07_output.sh
+.07_output.sh.swp
+07_output.txt
+.git
+.gitignore
+README.md
+.README.md.swp
